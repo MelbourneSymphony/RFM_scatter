@@ -9,7 +9,7 @@ custom_palette = ["#5a8eb8", "#5ab874", "#bf3636", "#f08922", "#8146d4", "#e3528
 fig_all = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segment',width=1600, height=800,color_continuous_scale=custom_palette)
 log_fig = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segment', log_x=False,log_y=True,log_z=True, width=1600, height=800,color_continuous_scale=custom_palette)
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 st.set_option('deprecation.showPyplotGlobalUse', True)
 st.title("MSO RFM Segmentation Dashboard")
 option = st.selectbox("Select Plot", ("Default", "Show Density of Segments"))
@@ -32,7 +32,7 @@ st.pyplot(plt)
 
 st.write(
 """
-Here are the number of customers in each segment. Ive also made some preliminary labels for each segment.  \n
+This Graph shows the number of customers in each segment. Ive also made some preliminary labels for each segment.  \n
 
 0 = 'Low Value customers 21-22' \n
 1 = 'low value customers Pre 2020' \n
