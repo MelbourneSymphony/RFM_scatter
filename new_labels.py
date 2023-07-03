@@ -5,7 +5,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('https://raw.githubusercontent.com/Melsuser5/RFM_labels/main/rfm_data_with_new_labels.csv')
-custom_palette = ["#5a8eb8", "##5ab874", "#bf3636", "#f08922", "#8146d4", "#e3528e", "#2a9ac7"]
+custom_palette = ["#5a8eb8", "#5ab874", "#bf3636", "#f08922", "#8146d4", "#e3528e", "#2a9ac7"]
 fig_all = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segment',width=1600, height=800,color_continuous_scale=custom_palette)
 log_fig = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segment', log_x=False,log_y=True,log_z=True, width=1600, height=800,color_continuous_scale=custom_palette)
 
