@@ -10,6 +10,7 @@ fig_all = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segm
 log_fig = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segment', log_x=False,log_y=True,log_z=True, width=1600, height=800,color_discrete_sequence=custom_palette)
 
 st.set_page_config(layout="wide")
+st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title("MSO RFM Segmentation Dashboard")
 option = st.selectbox("Select Plot", ("Default", "Show Density of Segments"))
 if option == "Default":
