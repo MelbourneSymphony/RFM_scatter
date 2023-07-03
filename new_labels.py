@@ -23,11 +23,11 @@ Use the dropdown to see how dense each Segment is
 st.header("Number of Customers by Segment (Subscriber Vs Non Subscribers")
 segment_counts = df.groupby(['Segment', 'subscriber']).size().reset_index(name='count')
 
-ax = sns.barplot(x='Segment', y='count', hue='subscriber', data=segment_counts)
-ax.figure(figsize=(10, 6))
-ax.xlabel('Segment')
-ax.ylabel('Count')
-st.pyplot(ax)
+sns.barplot(x='Segment', y='count', hue='subscriber', data=segment_counts)
+plt.figure(figsize=(10, 6))
+plt.xlabel('Segment')
+plt.ylabel('Count')
+st.pyplot()
 
 """
 Here are the number of customers in each segment. Ive also made some preliminary labels for each segment.
