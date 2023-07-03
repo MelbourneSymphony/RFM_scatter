@@ -24,9 +24,9 @@ st.header("Number of Customers by Segment (Subscriber Vs Non Subscribers")
 segment_counts = df.groupby(['Segment', 'subscriber']).size().reset_index(name='count')
 
 ax = sns.barplot(x='Segment', y='count', hue='subscriber', data=segment_counts)
-ax.plt.figure(figsize=(10, 6))
-ax.plt.xlabel('Segment')
-ax.plt.ylabel('Count')
+ax.figure(figsize=(10, 6))
+ax.xlabel('Segment')
+ax.ylabel('Count')
 st.pyplot(ax)
 
 """
