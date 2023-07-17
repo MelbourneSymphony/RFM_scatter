@@ -34,13 +34,13 @@ st.write(
 """
 This Graph shows the number of customers in each segment. Ive also made some preliminary labels for each segment.  \n
 
-0 = 'Low Value customers 21-22' \n
-1 = 'low value customers Pre 2020' \n
-2 = 'Low Value recent/Mid value past' \n
-3 = 'Mid value customers' \n
-4 = 'Low Reserve Purchasers' \n
-5 = 'High revenue less frequent, recent' \n
-6 = 'High reveuene, frequent, recent' \n
+0 = 'Slipping - past customers who havent bought in awhile' \n
+1 = 'Slipping - past customers who havent bought in awhile' \n
+2 = 'Rookies - New Customers' \n
+3 = 'Faithful - Customers who return often, but do not spend a lot' \n
+4 = 'Loyal Purchasers - purchase most often' \n
+5 = 'Whales - Highest paying' \n
+6 = 'Whales - Highest paying' \n
 
 Given how few customers are in segments 5 and 6 i think that should merged into a single segment of High Value Subscribers.
 There is also not alot of difference between segments 0 and 1 and could also be grouped together.
