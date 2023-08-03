@@ -30,6 +30,12 @@ plt.xlabel('Segment')
 plt.ylabel('Count')
 st.pyplot(plt)
 
+
+segment_counts = df['overall_score'].value_counts()
+segment_counts_df = pd.DataFrame({'Segment': segment_counts.index, 'Number of Customers': segment_counts.values})
+st.table(segment_counts_df)
+
+
 st.write(
 """
 This Graph shows the number of customers in each segment. Ive also made some preliminary labels for each segment.  \n
