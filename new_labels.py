@@ -42,6 +42,4 @@ This Graph shows the number of customers in each segment. Ive also made some pre
 5 = 'Affluent - Customers who are willing to pay a premium' \n
 6 = 'S Tier - Highest paying' \n
 
-Given how few customers are in segments 5 and 6 i think that should merged into a single segment of High Value Subscribers.
-There is also not alot of difference between segments 0 and 1 and could also be grouped together.
 """)
