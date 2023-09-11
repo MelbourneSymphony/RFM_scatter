@@ -39,4 +39,4 @@ segment_data = [
 ]
 seg_count = pd.DataFrame(segment_data)
 
-st.table(seg_count)
+st.dataframe(seg_count)
