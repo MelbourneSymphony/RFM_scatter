@@ -38,6 +38,6 @@ segment_data = [
     {"Segment": "6 - 'Top Tier’", "Description": "Top 5% total ticket spend", "Customer Count": 274}
 ]
 seg_count = pd.DataFrame(segment_data)
-seg_count.set_index('Segment')
+seg_count.set_index(['Segment'])
 
 st.write(seg_count)
