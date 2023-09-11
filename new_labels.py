@@ -12,15 +12,12 @@ log_fig = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segm
 st.set_page_config(layout="centered")
 st.set_option('deprecation.showPyplotGlobalUse', True)
 st.title("MSO RFM Segmentation Dashboard")
-option = st.selectbox("Select Plot", ("Default", "Show Density of Segments"))
+option = st.selectbox("Use the dropdown to see how dense each segment is", ("Segments", "Show Density of Segments"))
 if option == "Default":
     st.plotly_chart(fig_all, use_container_width=True)
 elif option == "Show Density of Segments":
     st.plotly_chart(log_fig, use_container_width=True)
 
-"""
-Use the dropdown to see how dense each Segment is
-"""
 st.header("Number of Customers by Segment (Subscriber Vs Non Subscribers")
 segment_counts = df.groupby(['Segment', 'subscriber']).size().reset_index(name='count')
 
