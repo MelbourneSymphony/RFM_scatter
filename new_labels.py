@@ -39,4 +39,4 @@ segment_data = [
 ]
 seg_count = pd.DataFrame(segment_data)
 
-st.dataframe(seg_count,hide_index=True,use_container_width=True)
+st.dataframe(seg_count,hide_index=True,width=1450)
