@@ -13,7 +13,7 @@ st.set_page_config(layout="centered")
 st.set_option('deprecation.showPyplotGlobalUse', True)
 st.title("MSO RFM Segmentation Dashboard")
 option = st.selectbox("Use the dropdown to see how dense each segment is", ("Segments", "Show Density of Segments"))
-if option == "Default":
+if option == "Segments":
     st.plotly_chart(fig_all, use_container_width=True)
 elif option == "Show Density of Segments":
     st.plotly_chart(log_fig, use_container_width=True)
