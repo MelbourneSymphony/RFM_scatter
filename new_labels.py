@@ -40,5 +40,6 @@ segment_data = [
     {"Segment": "5 - Affluent", "Description": "Customers who spend over $1,200 per transaction", "Customer Count": 563},
     {"Segment": "6 - 'Top Tier’", "Description": "Top 5% total ticket spend", "Customer Count": 274}
 ]
+seg_count = pd.DataFrame(segment_data)
 
-st.table(segment_data)
+st.table(seg_count)
