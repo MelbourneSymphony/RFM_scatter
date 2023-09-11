@@ -31,21 +31,14 @@ plt.ylabel('Count')
 st.pyplot(plt)
 
 
-segment_counts = df['overall_score'].value_counts()
-segment_counts_df = pd.DataFrame({'Segment': segment_counts.index, 'Number of Customers': segment_counts.values})
-st.table(segment_counts_df)
+segment_data = [
+    {"Segment": "0 – Slipping", "Description": "Customers who have not purchased within the last year", "Customer Count": 45800},
+    {"Segment": "1 - Lost Touch", "Description": "Customers who have not purchased since 2020", "Customer Count": 34126},
+    {"Segment": "2 - New Customers", "Description": "Customers that have made at least one purchase in the last year", "Customer Count": 18174},
+    {"Segment": "3 - Faithful", "Description": "Customers who return often, but do not spend as much in each transaction compared to other segments (average of $118)", "Customer Count": 2951},
+    {"Segment": "4 - Loyal Purchasers", "Description": "Purchase most often compared to other segments (top 5% frequency)", "Customer Count": 1013},
+    {"Segment": "5 - Affluent", "Description": "Customers who spend over $1,200 per transaction", "Customer Count": 563},
+    {"Segment": "6 - 'Top Tier’", "Description": "Top 5% total ticket spend", "Customer Count": 274}
+]
 
-
-st.write(
-"""
-This Graph shows the number of customers in each segment. Ive also made some preliminary labels for each segment.  \n
-
-0 = 'Slipping - past customers who havent bought in awhile' \n
-1 = 'Lost Touch - past customers who havent bought since 2020' \n
-2 = 'Rookies - New Customers' \n
-3 = 'Faithful - Customers who return often, but do not spend a lot' \n
-4 = 'Loyal Purchasers - purchase most often' \n
-5 = 'Affluent - Customers who are willing to pay a premium' \n
-6 = 'S Tier - Highest paying' \n
-
-""")
+st.table(segment_data)
