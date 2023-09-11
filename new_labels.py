@@ -18,15 +18,7 @@ if option == "Segments":
 elif option == "Show Density of Segments":
     st.plotly_chart(log_fig, use_container_width=True)
 
-st.header("Number of Customers by Segment (Subscriber Vs Non Subscribers")
-segment_counts = df.groupby(['Segment', 'subscriber']).size().reset_index(name='count')
-
-plt.figure(figsize=(5, 3))
-sns.barplot(x='Segment', y='count', hue='subscriber', data=segment_counts)
-plt.xlabel('Segment')
-plt.ylabel('Count')
-st.pyplot(plt)
-
+st.header("Segment Descriptions and Database Count")
 
 segment_data = [
     {"Segment": "0 – Slipping", "Description": "Customers who have not purchased within the last year", "Customer Count": 45800},
@@ -41,3 +33,11 @@ seg_count = pd.DataFrame(segment_data)
 seg_count.set_index(['Segment'],inplace=True)
 
 st.table(seg_count)
+
+st.header("Number of Subscribers vs Non Subscribers in each Segment")
+segment_counts = df.groupby(['Segment', 'subscriber']).size().reset_index(name='count')
+plt.figure(figsize=(5, 3))
+sns.barplot(x='Segment', y='count', hue='subscriber', data=segment_counts)
+plt.xlabel('Segment')
+plt.ylabel('Count')
+st.pyplot(plt)
