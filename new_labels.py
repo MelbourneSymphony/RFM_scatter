@@ -40,4 +40,4 @@ segment_data = [
 seg_count = pd.DataFrame(segment_data)
 seg_count.set_index(['Segment'])
 
-st.write(seg_count)
+st.table(seg_count)
