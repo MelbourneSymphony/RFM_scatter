@@ -14,8 +14,10 @@ st.set_option('deprecation.showPyplotGlobalUse', True)
 st.title("MSO RFM Segmentation Dashboard")
 option = st.selectbox("Use the dropdown to see how dense each segment is", ("Segments", "Show Density of Segments"))
 if option == "Segments":
+    st.markdown(''' This 3D scatter plot visualises the segments and where they fall in terms of the three maeasures of RFM''')
     st.plotly_chart(fig_all, use_container_width=True)
 elif option == "Show Density of Segments":
+    st.markdown('''This plot expands the axis scale based on the size of the clusters, allowing us see that clusters 0 and 1 are quite dense and are larger than the other clusters''')
     st.plotly_chart(log_fig, use_container_width=True)
 
 st.header("Segment Descriptions and Database Count")
@@ -31,7 +33,7 @@ segment_data = [
 ]
 seg_count = pd.DataFrame(segment_data)
 seg_count.set_index(['Segment'],inplace=True)
-
+st.markdown('''The below segments have been identified, applicable to customers with purchase history within the last five years.''')
 st.table(seg_count)
 
 st.header("Number of Subscribers vs Non Subscribers in each Segment")
