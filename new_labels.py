@@ -24,7 +24,7 @@ st.header("Segment Descriptions and Database Count")
 
 segment_data = [
     {"Segment": "0 – Slipping", "Description": "Customers who have not purchased within the last year", "Customer Count": 31020},
-    {"Segment": "1 - Lost Touch", "Description": "Customers who have not purchased since 2020", "Customer Count": 336456},
+    {"Segment": "1 - Lost Touch", "Description": "Customers who have not purchased since 2020", "Customer Count": 33645},
     {"Segment": "2 - New Customers", "Description": "Customers that have made at least one purchase in the last year", "Customer Count": 46943},
     {"Segment": "3 - Faithful", "Description": "Customers who return often, but do not spend as much in each transaction compared to other segments (average of $118)", "Customer Count": 3077},
     {"Segment": "4 - Loyal Purchasers", "Description": "Purchase most often compared to other segments (top 5% frequency)", "Customer Count": 436},
