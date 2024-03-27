@@ -20,6 +20,7 @@ elif option == "Show Density of Segments":
     st.markdown('''This plot expands the axis scale based on the size of the clusters, allowing us see that clusters 0 and 1 are quite dense and are larger than the other clusters''')
     st.plotly_chart(log_fig, use_container_width=True)
 
+st.write("Segmentation Flows Click [here](https://rfmflow-o3zzye2ivmsgdfx4akmdoy.streamlit.app/)")
 st.header("Segment Descriptions and Database Count")
 
 segment_data = [
