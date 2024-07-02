@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('https://raw.githubusercontent.com/Melsuser5/RFM_labels/main/rfm_2024_q1_predictions_3.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Melsuser5/RFM_labels/main/rfm_july_2024_rfm_july_2024_predictions.csv')
 custom_palette = ["#5a8eb8", "#5ab874", "#bf3636", "#f08922", "#8146d4", "#e3528e", "#2a9ac7"]
 fig_all = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='2024_q1_segment',width=1600, height=800,color_continuous_scale=custom_palette)
 log_fig = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='2024_q1_segment', log_x=False,log_y=True,log_z=True, width=1600, height=800,color_continuous_scale=custom_palette)
@@ -19,7 +19,7 @@ if option == "Segments":
     st.plotly_chart(fig_all, use_container_width=True)
 elif option == "Show Density of Segments":
     st.markdown('''This plot expands the axis scale based on the size of the clusters, allowing us see that clusters 0 and 1 are quite dense and are larger than the other clusters
-    - Last Updated 09/04/2024''')
+    - Last Updated 02/07/2024''')
     st.plotly_chart(log_fig, use_container_width=True)
 
 st.write("Segmentation Flows Click [here](https://rfmflow-o3zzye2ivmsgdfx4akmdoy.streamlit.app/)")
