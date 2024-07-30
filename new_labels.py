@@ -10,7 +10,6 @@ fig_all = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segm
 log_fig = px.scatter_3d(df, x='recency', y='frequency', z='revenue', color='Segment', log_x=False,log_y=True,log_z=True, width=1600, height=800,color_continuous_scale=custom_palette)
 
 st.set_page_config(layout="centered")
-st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title("MSO RFM Segmentation Dashboard")
 option = st.selectbox("Use the dropdown to see how dense each segment is", ("Segments", "Show Density of Segments"))
 if option == "Segments":
@@ -31,7 +30,7 @@ segment_data = [
     {"Segment": "2 - New Customers", "Description": "Customers that have made at least one purchase in the last year", "Customer Count": 45900},
     {"Segment": "3 - Faithful", "Description": "Customers who return often, but do not spend as much in each transaction compared to other segments", "Customer Count": 1090},
     {"Segment": "4 - Loyal Purchasers", "Description": "Purchase most often compared to other segments (top 5% frequency)", "Customer Count": 140},
-    {"Segment": "5 - Affluent", "Description": "Customers who spend over $1,200 per transaction", "Customer Count": 3030},
+    {"Segment": "5 - Affluent", "Description": "Customers who Purchase in higher reserves", "Customer Count": 3030},
     {"Segment": "6 - 'Top Tier’", "Description": "Top 5% total ticket spend", "Customer Count": 500}
 ]
 seg_count = pd.DataFrame(segment_data)
