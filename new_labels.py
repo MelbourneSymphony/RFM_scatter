@@ -21,7 +21,7 @@ elif option == "Show Density of Segments":
     - Last Updated 02/07/2024''')
     st.plotly_chart(log_fig, use_container_width=True)
 
-st.write("Segmentation Flows Click [here](https://rfmflow-o3zzye2ivmsgdfx4akmdoy.streamlit.app/)")
+st.write("Segmentation Flows Click [here](https://mso-rfmflow.streamlit.app/)")
 st.header("Segment Descriptions and Database Count")
 
 segment_data = [
