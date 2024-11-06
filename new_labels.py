@@ -17,7 +17,7 @@ if option == "Segments":
     - Last Updated 06/11/2024''')
     st.plotly_chart(fig_all, use_container_width=True)
 elif option == "Show Density of Segments":
-    st.markdown('''This plot expands the axis scale based on the size of the clusters, allowing us see that clusters 0 and 1 are quite dense and are larger than the other clusters
+    st.markdown('''This plot expands the axis scale based on the size of the clusters, allowing us see that 'New Customers' and 'Slipping' are quite dense and are larger than the other clusters
     - Last Updated 06/11/2024''')
     st.plotly_chart(log_fig, use_container_width=True)
 
@@ -25,13 +25,13 @@ st.write("Segmentation Flows Click [here](https://mso-rfmflow.streamlit.app/)")
 st.header("Segment Descriptions and Database Count")
 
 segment_data = [
-    {"Segment": "0 – Slipping", "Description": "Customers who have not purchased within the last year", "Customer Count": 55640},
-    {"Segment": "1 - Lost Touch", "Description": "Customers who have not purchased since 2020", "Customer Count": 8656},
-    {"Segment": "2 - New Customers", "Description": "Customers that have made at least one purchase in the last year", "Customer Count": 42552},
-    {"Segment": "3 - Faithful", "Description": "Customers who return often, but do not spend as much in each transaction compared to other segments", "Customer Count": 459},
-    {"Segment": "4 - Loyal Purchasers", "Description": "Purchase most often compared to other segments (top 5% frequency)", "Customer Count": 140},
-    {"Segment": "5 - Affluent", "Description": "Customers who Purchase in higher reserves", "Customer Count": 2511},
-    {"Segment": "6 - 'Top Tier’", "Description": "Top 5% total ticket spend", "Customer Count": 294}
+    {"Segment": "0 – Slipping", "Description": "Customers who have not purchased within the last year", "Customer Count": 56193},
+    {"Segment": "1 - Lost Touch", "Description": "Customers who have not purchased since 2020", "Customer Count": 8764},
+    {"Segment": "2 - New Customers", "Description": "Customers that have made at least one purchase in the last year", "Customer Count": 47961},
+    {"Segment": "3 - Faithful", "Description": "Customers who return often, but do not spend as much in each transaction compared to other segments", "Customer Count": 1034},
+    {"Segment": "4 - Loyal Purchasers", "Description": "Purchase most often compared to other segments (top 5% frequency)", "Customer Count": 0},
+    {"Segment": "5 - Affluent", "Description": "Customers who Purchase in higher reserves", "Customer Count": 2547},
+    {"Segment": "6 - 'Top Tier’", "Description": "Top 5% total ticket spend", "Customer Count": 304}
 ]
 seg_count = pd.DataFrame(segment_data)
 seg_count.set_index(['Segment'],inplace=True)
