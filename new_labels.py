@@ -14,11 +14,11 @@ st.title("MSO RFM Segmentation Dashboard")
 option = st.selectbox("Use the dropdown to see how dense each segment is", ("Segments", "Show Density of Segments"))
 if option == "Segments":
     st.markdown(''' This 3D scatter plot visualises the segments and where they fall in terms of the three measures of RFM
-    - Last Updated 02/07/2024''')
+    - Last Updated 06/11/2024''')
     st.plotly_chart(fig_all, use_container_width=True)
 elif option == "Show Density of Segments":
     st.markdown('''This plot expands the axis scale based on the size of the clusters, allowing us see that clusters 0 and 1 are quite dense and are larger than the other clusters
-    - Last Updated 02/07/2024''')
+    - Last Updated 06/11/2024''')
     st.plotly_chart(log_fig, use_container_width=True)
 
 st.write("Segmentation Flows Click [here](https://mso-rfmflow.streamlit.app/)")
