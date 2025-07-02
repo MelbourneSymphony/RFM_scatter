@@ -25,12 +25,12 @@ st.write("Segmentation Flows Click [here](https://mso-rfmflow.streamlit.app/)")
 st.header("Segment Descriptions and Database Count")
 
 segment_data = [
-    {"Segment": "Slipping", "Description": "Customers who have not made a purchase within the last year", "Customer Count": 64015},
-    {"Segment": "Lost Touch", "Description": "Customers who have not made a purchase in the last 3 years", "Customer Count": 14070},
+    {"Segment": "Slipping", "Description": "Customers who have not made a purchase within the last year", "Customer Count": 64386},
+    {"Segment": "Lost Touch", "Description": "Customers who have not made a purchase in the last 3 years", "Customer Count": 14072},
     {"Segment": "New Customers", "Description": "Customers that have made a purchase in the last year", "Customer Count": 46881},
     {"Segment": "Faithful", "Description": "Customers who return often, but do not spend as much in each transaction compared to other segments", "Customer Count": 2339},
-    {"Segment": "Affluent", "Description": "Customers who Purchase in higher reserves", "Customer Count": 3266},
-    {"Segment": "Top Tier", "Description": "Top 5% total ticket spend", "Customer Count": 317}
+    {"Segment": "Affluent", "Description": "Customers who Purchase in higher reserves", "Customer Count": 2903},
+    {"Segment": "Top Tier", "Description": "Top 5% total ticket spend", "Customer Count": 307}
 ]
 seg_count = pd.DataFrame(segment_data)
 seg_count.set_index(['Segment'],inplace=True)
